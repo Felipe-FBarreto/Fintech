@@ -12,13 +12,11 @@ export const DateRange = () => {
         value={start}
         onChange={({ target }) => setStart(target.value)}
       />
-      {start}
       <DateInput
         label="Final"
         value={final}
         onChange={({ target }) => setFinal(target.value)}
       />
-      {final}
     </form>
   );
 };

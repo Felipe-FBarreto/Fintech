@@ -21,7 +21,7 @@ export type IVendas = {
   nome: string;
   preco: number;
   status: "processando" | "pago" | "falha";
-  pagemento: "boleto" | "pix" | "cartão";
+  pagamento: "boleto" | "pix" | "cartao";
   parcelas: number | null;
   data: string;
 };
