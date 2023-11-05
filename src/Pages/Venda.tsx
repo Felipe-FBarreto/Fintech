@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import useFetch from "../Hooks/useFetch";
 import { IVendas } from "../Context/DataContext";
+import { Loading } from "../Componets/Loading";
 
 export const Venda = () => {
   const { id } = useParams();
@@ -10,8 +11,8 @@ export const Venda = () => {
     `https://data.origamid.dev/vendas/${venda}`,
   );
 
+  if (loading === true) return <Loading />;
   if (data === null) return null;
-  console.log(data);
   return (
     <section>
       <div className="box mb">ID: {data.id}</div>
